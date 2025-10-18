@@ -51,13 +51,13 @@ class DeviceManager:
 
         time.sleep(2) # 최소 대기
 
-    # 모든 Dot Matrix에 '통신중' 표시
-    for i, ser in enumerate(self.port_obj):
-        if ser:
-            try:
-                ser.write(b'c')  # '통신중' 명령
-            except:
-                pass
+      # 모든 Dot Matrix에 '통신중' 표시
+        for i, ser in enumerate(self.port_obj):
+            if ser:
+                try:
+                    ser.write(b'c')  # '통신중' 명령
+                except:
+                    pass
     
         time.sleep(3) # 나머지 안정화
 
